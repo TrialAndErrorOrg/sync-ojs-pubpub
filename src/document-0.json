@@ -1,0 +1,1489 @@
+{
+  "type": "doc",
+  "content": [
+    {
+      "type": "heading",
+      "attrs": {
+        "id": "abstract",
+        "level": 1,
+        "fixedId": "abstract"
+      },
+      "content": [
+        {
+          "text": "Abstract",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Rapid technological development allows for ever new opportunities to nudge individuals’ behavior and knowledge digitally. The Gloria Adherence Subproject by Hartman et al. (2022) implements such a digital nudge via a mobile device aiming at medication adherence. Besides methodological and practical shortcomings outlined by the authors themselves, the used adherence nudge might have had conceptual weaknesses. In the present article, I reflect on three prominent challenges of digital nudges in general and an emerging redemption of the nudging-concept in the form of so-called boosts. Both reflections inform the evaluation of the outcomes of the Gloria Adherence Subproject and suggest specific actions for optimization for future project retrials or conceptual replications by other scientists.",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "attrs": {
+        "level": 1
+      },
+      "content": [
+        {
+          "text": "Abstract",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "W",
+          "type": "text"
+        },
+        {
+          "text": "ith",
+          "type": "text"
+        },
+        {
+          "text": " rapid technological advancements researchers and practitioners are offered new and improved opportunities to intervene with individuals’ behavior and knowledge digitally. Whole industry sectors focus on digital interventions that aim to increase the flourishing and well-being of the receiver (e.g., apps like ",
+          "type": "text"
+        },
+        {
+          "text": "one sec",
+          "type": "text",
+          "marks": [
+            {
+              "type": "em"
+            }
+          ]
+        },
+        {
+          "type": "footnote",
+          "attrs": {
+            "count": 1,
+            "value": "<p>one-sec.app/, an app to decrease automatic digital consumption and promote deliberate consumption.</p>"
+          }
+        },
+        {
+          "text": " or ",
+          "type": "text"
+        },
+        {
+          "text": "Structured",
+          "type": "text",
+          "marks": [
+            {
+              "type": "em"
+            }
+          ]
+        },
+        {
+          "type": "footnote",
+          "attrs": {
+            "count": 2,
+            "value": "<p>structured.app/, an app to promote structured day-planning.</p>"
+          }
+        },
+        {
+          "text": "). Psychological research has also focused on developing and scrutinizing digital nudges to advance a multitude of fields concerned with but not limited to prosociality offline and online ",
+          "type": "text"
+        },
+        {
+          "type": "citation",
+          "attrs": {
+            "value": "@article{Matias2019Preventing,\n\tauthor = {Matias, J. N.},\n\tjournal = {Proceedings of the National Academy of Sciences},\n\tnumber = {20},\n\tyear = {2019},\n\tpages = {9785--9789},\n\ttitle = {Preventing harassment and increasing group participation through social norms in 2,190 online science discussions},\n\thowpublished = {https://doi.org/10.1073/pnas.1813486116},\n\tvolume = {116},\n}\n\n"
+          }
+        },
+        {
+          "type": "citation",
+          "attrs": {
+            "value": "@article{Tyler2021Social,\n\tauthor = {Tyler, T. and Katsaros, M. and Meares, T. and Venkatesh, S.},\n\tjournal = {Journal of Experimental Criminology},\n\tnumber = {1},\n\tyear = {2021},\n\tpages = {109--127},\n\ttitle = {Social media governance: Can social media companies motivate voluntary rule following behavior among their users?},\n\thowpublished = {https://doi.org/10.1007/s11292-019-09392-z},\n\tvolume = {17},\n}\n\n"
+          }
+        },
+        {
+          "type": "citation",
+          "attrs": {
+            "value": "@misc{Gruning2022First,\n\tauthor = {Gr{\\\" u}ning, D. J. and Mata, A. O. P. and Fiedler, K.},\n\tyear = {2022},\n\ttitle = {First exploration of the prediction-comprehension bias},\n\thowpublished = {https://doi.org/10.31234/osf.io/qp894},\n}\n\n"
+          }
+        },
+        {
+          "text": ", misinformation ",
+          "type": "text"
+        },
+        {
+          "type": "citation",
+          "attrs": {
+            "value": "@article{Donovan2020Look,\n\tauthor = {Donovan, A. M. and Rapp, D. N.},\n\tjournal = {Memory & Cognition},\n\tnumber = {7},\n\tyear = {2020},\n\tpages = {1128--1145},\n\ttitle = {Look it up: Online search reduces the problematic effects of exposures to inaccuracies},\n\tvolume = {48},\n}\n\n"
+          }
+        },
+        {
+          "type": "citation",
+          "attrs": {
+            "value": "@article{Guess2020digital,\n\tauthor = {Guess, A. M. and Lerner, M. and Lyons, B. and Montgomery, J. M. and Nyhan, B. and Reifler, J. and Sircar, N.},\n\tjournal = {Proceedings of the National Academy of Sciences},\n\tnumber = {27},\n\tyear = {2020},\n\tpages = {15536--15545},\n\ttitle = {A digital media literacy intervention increases discernment between mainstream and false news in the {United} {States} and {India}},\n\thowpublished = {https://doi.org/10.1073/pnas.192049811},\n\tvolume = {117},\n}\n\n"
+          }
+        },
+        {
+          "type": "citation",
+          "attrs": {
+            "value": "@article{Lutzke2019Priming,\n\tauthor = {Lutzke, L. and Drummond, C. and Slovic, P. and {\\' A}rvai, J.},\n\tjournal = {Global Environmental Change},\n\tyear = {2019},\n\tpages = {101964},\n\ttitle = {Priming critical thinking: Simple interventions limit the influence of fake news about climate change on facebook},\n\thowpublished = {https://doi.org/10.1016/j.gloenvcha.2019.101964},\n\tvolume = {58},\n}\n\n"
+          }
+        },
+        {
+          "type": "citation",
+          "attrs": {
+            "value": "@misc{Kozyreva2022Toolbox,\n\tauthor = {Kozyreva, A. and Lorenz-Spreen, P. and Herzog, S. M. and Ecker, U. K. H. and Lewandowsky, S. and Hertwig, R.},\n\tyear = {2022},\n\ttitle = {Toolbox of interventions against online misinformation and manipulation},\n\thowpublished = {https://doi.org/10.31234/osf.io/x8ejt},\n}\n\n"
+          }
+        },
+        {
+          "text": ", consumption of digital contents ",
+          "type": "text"
+        },
+        {
+          "type": "citation",
+          "attrs": {
+            "value": "@article{Gruning2023Directing,\n\tauthor = {Gr{\\\" u}ning, D. J. and Riedel, F. and Lorenz-Spreen, P.},\n\tjournal = {Proceedings of the National Academy of Sciences},\n\tnumber = {8},\n\tyear = {2023},\n\tpages = {2213114120},\n\ttitle = {Directing smart phone use through the self-nudge app one sec},\n\thowpublished = {https://doi.org/10.1073/pnas.2213114120},\n\tvolume = {120},\n}\n\n"
+          }
+        },
+        {
+          "text": ", and medical health behavior ",
+          "type": "text"
+        },
+        {
+          "type": "citation",
+          "attrs": {
+            "value": "@article{Glasgow2021NUDGE,\n\tauthor = {Glasgow, R. E. and Knoepke, C. E. and Magid, D. and Grunwald, G. K. and Glorioso, T. J. and Waughtal, J. and Marrs, J. C. and Bull, S. and Ho, P. M.},\n\tjournal = {Trials},\n\tnumber = {1},\n\tyear = {2021},\n\tpages = {1--16},\n\ttitle = {The {NUDGE} trial pragmatic trial to enhance cardiovascular medication adherence: Study protocol for a randomized controlled trial},\n\tvolume = {22},\n}\n\n"
+          }
+        },
+        {
+          "type": "citation",
+          "attrs": {
+            "value": "@article{Horne2022Behavioral,\n\tauthor = {Horne, B. D. and Muhlestein, J. B. and Lapp{\\' e}, D. L. and May, H. T. and Le, V. T. and Bair, T. L. and Babcock, D. and Bride, D. and Knowlton, K. U. and Anderson, J. L.},\n\tjournal = {American Heart Journal},\n\tyear = {2022},\n\tpages = {125--134},\n\ttitle = {Behavioral nudges as patient decision support for medication adherence: The {ENCOURAGE} randomized controlled trial},\n\thowpublished = {https://doi-org/10.1016/j.ahj.2021.11.001},\n\tvolume = {244},\n}\n\n"
+          }
+        },
+        {
+          "type": "citation",
+          "attrs": {
+            "value": "@article{Luong2021Text,\n\tauthor = {Luong, P. and Glorioso, T. J. and Grunwald, G. K. and Peterson, P. and Allen, L. A. and Khanna, A. and Waughtal, J. and Sandy, L. and Ho, P. M. and Bull, S.},\n\tjournal = {Circulation: Cardiovascular Quality and Outcomes},\n\tnumber = {5},\n\tyear = {2021},\n\tpages = {007015},\n\ttitle = {Text message medication adherence reminders automated and delivered at scale across two institutions: Testing the nudge system: Pilot study},\n\thowpublished = {https://doi.org/10.1161/CIRCOUTCOMES.120.007015},\n\tvolume = {14},\n}\n\n"
+          }
+        },
+        {
+          "text": ".",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "In a similar vein as the last example, a digitally directed nudge was tested by ",
+          "type": "text"
+        },
+        {
+          "type": "citation",
+          "attrs": {
+            "value": "@article{Hartman2021Gloria,\n\tauthor = {Hartman, L. and Kok, M. R. and Molenaar, E. and Griep, N. and Van Laar, J. M. and Van Woerkom, J. M. and F., Allaar C. and Raterman, H. G. and Ruiterman, Y. P. M. and Voshaar, M. J. H. and Redol, J. and Pinto, R. M. A. and Klausch, L. T. and Lems, W. F. and Boers, M.},\n\tjournal = {Journal of Trial and Error},\n\tnumber = {1},\n\tyear = {2021},\n\tpages = {50--55},\n\ttitle = {The {Gloria} {Adherence} {Subproject}: Problems and randomization mistakes},\n\thowpublished = {https://doi.org/10.36850/e6},\n\tvolume = {2},\n}\n\n"
+          }
+        },
+        {
+          "text": " in the ",
+          "type": "text"
+        },
+        {
+          "text": "Gloria Adherence Subproject",
+          "type": "text",
+          "marks": [
+            {
+              "type": "em"
+            }
+          ]
+        },
+        {
+          "text": " to increase medication adherence in the form of the daily pill intake of patients with a chronic inflammatory disease (e.g., rheumatoid arthritis). As the authors already outline methodological and practical issues of the study in detail, in the present reflection article, I will focus on a higher-level scope of discussion. That is, I aim for a broader reflection on nudges that are linked to technology as their medium, namely, digital devices or online tools. I will (1) outline two different types of digital nudges, (2) review challenges of these unsupervised nudges, and (3) suggest an improvement of them that is already researched and applied in different digital spaces: boosting ",
+          "type": "text"
+        },
+        {
+          "type": "citation",
+          "attrs": {
+            "value": "@article{Hertwig2017When,\n\tauthor = {Hertwig, R.},\n\tjournal = {Behavioural Public Policy},\n\tnumber = {2},\n\tyear = {2017},\n\tpages = {143--161},\n\ttitle = {When to consider boosting: Some rules for policy-makers},\n\thowpublished = {https://doi.org/10.1017/bpp.2016.14},\n\tvolume = {1},\n}\n\n"
+          }
+        },
+        {
+          "type": "citation",
+          "attrs": {
+            "value": "@article{Hertwig2017Nudging,\n\tauthor = {Hertwig, R. and Gr{\\\" u}ne-Yanoff, T.},\n\tjournal = {Perspectives on Psychological Science},\n\tnumber = {6},\n\tyear = {2017},\n\tpages = {973--986},\n\ttitle = {Nudging and boosting: Steering or empowering good decisions},\n\thowpublished = {https://doi.org/10.1177/1745691617702496},\n\tvolume = {12},\n}\n\n"
+          }
+        },
+        {
+          "type": "citation",
+          "attrs": {
+            "value": "@article{Lorenz2021Boosting,\n\tauthor = {Lorenz-Spreen, P. and Geers, M. and Pachur, T. and Hertwig, R. and Lewandowsky, S. and Herzog, S.},\n\tjournal = {Scientific Reports},\n\tnumber = {1},\n\tyear = {2021},\n\tpages = {15541},\n\ttitle = {Boosting people\\textquoteright{}s ability to detect microtargeted advertising},\n\thowpublished = {https://doi.org/10.1038/s41598-021-94796-z},\n\tvolume = {11},\n}\n\n"
+          }
+        },
+        {
+          "type": "citation",
+          "attrs": {
+            "value": "@article{Reijula2022Self,\n\tauthor = {Reijula, S. and Hertwig, R.},\n\tjournal = {Behavioural Public Policy},\n\tnumber = {1},\n\tyear = {2022},\n\tpages = {119--149},\n\ttitle = {Self-nudging and the citizen choice architect},\n\thowpublished = {https://doi.org/10.1017/bpp.2020.5},\n\tvolume = {6},\n}\n\n"
+          }
+        },
+        {
+          "text": ". In sum, the present paper is meant as a reflection on digital nudges per se, stimulated by the well-reflected use of this kind of intervention in the Gloria Adherence Subproject.",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "attrs": {
+        "id": "nudging-intervention-in-the-gloria-adherence-subproject",
+        "level": 1,
+        "fixedId": "nudging-intervention-in-the-gloria-adherence-subproject"
+      },
+      "content": [
+        {
+          "text": "Nudging intervention in the Gloria Adherence Subproject",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "citation",
+          "attrs": {
+            "value": "@article{Hartman2021Gloria,\n\tauthor = {Hartman, L. and Kok, M. R. and Molenaar, E. and Griep, N. and Van Laar, J. M. and Van Woerkom, J. M. and F., Allaar C. and Raterman, H. G. and Ruiterman, Y. P. M. and Voshaar, M. J. H. and Redol, J. and Pinto, R. M. A. and Klausch, L. T. and Lems, W. F. and Boers, M.},\n\tjournal = {Journal of Trial and Error},\n\tnumber = {1},\n\tyear = {2021},\n\tpages = {50--55},\n\ttitle = {The {Gloria} {Adherence} {Subproject}: Problems and randomization mistakes},\n\thowpublished = {https://doi.org/10.36850/e6},\n\tvolume = {2},\n}\n\n"
+          }
+        },
+        {
+          "text": " in the Gloria Adherence Subproject designed a between-subjects study with one experimental and one control group to test the effect of an adherence nudge on medication intake in patients with chronic inflammatory diseases. In the former group, patients were equipped with an app on their mobile device that reminded them daily to take their required medication, in the form of a pill, if they had not already done so. The control group was presented with no such intervention. Pill intake was measured via screening the removal of the electronic cap of the used pill bottles. The authors found no effects of the adherence nudge on patients‘ consistency in taking their medication. While Hartman and colleagues already consider practical and methodological shortcomings of the subproject in exemplary extensiveness, I want to address potential problems of the intervention itself and of digital nudges more generally. That is, the null results of the adherence nudging demonstrated in the Gloria Adherence Subproject stimulate further, more general, questions about the limits of digital nudging which are the focus of the present paper. I reflect on three challenges of digital nudging prominently discussed in intervention research, and on an emerging and commendable improvement of the nudging-concept named boosting. Beforehand, however, a general outline of digital nudges is needed.",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "attrs": {
+        "id": "two-types-of-digital-nudges-and-information-environments",
+        "level": 1,
+        "fixedId": "two-types-of-digital-nudges-and-information-environments"
+      },
+      "content": [
+        {
+          "text": "Two types of digital nudges and information environments",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Many researchers ",
+          "type": "text"
+        },
+        {
+          "type": "citation",
+          "attrs": {
+            "value": "@book{Bail2021Breaking,\n\tauthor = {Bail, C.},\n\tyear = {2021},\n\tpublisher = {Princeton University Press},\n\ttitle = {Breaking the social media prism},\n}\n\n"
+          }
+        },
+        {
+          "type": "citation",
+          "attrs": {
+            "value": "@book{Thomas1983youngest,\n\tauthor = {Thomas, L.},\n\tyear = {1983},\n\tpublisher = {Viking},\n\ttitle = {The youngest science: Notes of a medicine watcher},\n}\n\n"
+          }
+        },
+        {
+          "type": "citation",
+          "attrs": {
+            "value": "@book{2011Heuristics,\n\teditor = {Gigerenzer, G. and Hertwig, R. and Pachur, T.},\n\tyear = {2011},\n\tpublisher = {Oxford University Press},\n\ttitle = {Heuristics: The foundations of adaptive behavior},\n}\n\n"
+          }
+        },
+        {
+          "type": "citation",
+          "attrs": {
+            "value": "@book{2002Bounded,\n\teditor = {Gigerenzer, G. and Selten, R.},\n\tyear = {2002},\n\tpublisher = {MIT Press},\n\ttitle = {Bounded rationality: The adaptive toolbox},\n}\n\n"
+          }
+        },
+        {
+          "type": "citation",
+          "attrs": {
+            "value": "@article{Simon1956Rational,\n\tauthor = {Simon, H. A.},\n\tjournal = {Psychological Review},\n\tnumber = {2},\n\tyear = {1956},\n\tpages = {129--138},\n\ttitle = {Rational choice and the structure of the environment},\n\thowpublished = {https://doi.org/10.1037/h0042769},\n\tvolume = {63},\n}\n\n"
+          }
+        },
+        {
+          "text": " already pointed out that an individual must learn about an environment’s properties in order to function within it effectively. This realization is also important for understanding the (in)effectiveness of nudging interventions under certain circumstances. Environments vary between two extremes: ",
+          "type": "text"
+        },
+        {
+          "text": "kind",
+          "type": "text",
+          "marks": [
+            {
+              "type": "em"
+            }
+          ]
+        },
+        {
+          "text": " and ",
+          "type": "text"
+        },
+        {
+          "text": "wicked",
+          "type": "text",
+          "marks": [
+            {
+              "type": "em"
+            }
+          ]
+        },
+        {
+          "text": ". Kind environments provide feedback that is mostly accurate and direct. Wicked environments are based upon opaque variables and their moderators, which are interconnected and subject to changes across time. As a result, any feedback in wicked environments is volatile, confounded with moderators, and commonly presented with time delays ",
+          "type": "text"
+        },
+        {
+          "type": "citation",
+          "attrs": {
+            "value": "@book{Hogarth2001Educating,\n\tauthor = {Hogarth, R. M.},\n\tyear = {2001},\n\tpublisher = {Chicago University Press},\n\ttitle = {Educating intuition},\n}\n\n"
+          }
+        },
+        {
+          "text": ". Kind environments – like board games and most sports –lead to a positive learning curve for the individual through their reliable feedback utilization. Even relatively uninformed decision-makers can easily adapt to kind environments by trial and error behavior generating instructive feedback. By repeatedly taking action, people can reliably learn about the environment’s conditions and manage their intentions and actions accordingly. In contrast, wicked environments – like weather and climate, the stock market, or social media – can make people spiral into grave misconceptions about their environment. The result are misguided judgments and decisions ",
+          "type": "text"
+        },
+        {
+          "type": "citation",
+          "attrs": {
+            "value": "@article{Denrell2001Adaptation,\n\tauthor = {Denrell, J. and March, J. G.},\n\tjournal = {Organization Science},\n\tnumber = {5},\n\tyear = {2001},\n\tpages = {523--538},\n\ttitle = {Adaptation as information restriction: The hot stove effect},\n\thowpublished = {https://doi.org/10.1287/orsc.12.5.523.10092},\n\tvolume = {12},\n}\n\n"
+          }
+        },
+        {
+          "type": "citation",
+          "attrs": {
+            "value": "@article{Einhorn1978Confidence,\n\tauthor = {Einhorn, H. J. and Hogarth, R. M.},\n\tjournal = {Psychological Review},\n\tnumber = {5},\n\tyear = {1978},\n\tpages = {395--416},\n\ttitle = {Confidence in judgment: Persistence of the illusion of validity},\n\thowpublished = {https://doi.org/10.1037/0033-295X.85.5.395},\n\tvolume = {85},\n}\n\n"
+          }
+        },
+        {
+          "type": "citation",
+          "attrs": {
+            "value": "@article{Feiler2012Biased,\n\tauthor = {Feiler, D. C. and Tong, J. D. and Larrick, R. P.},\n\tjournal = {Management Science},\n\tnumber = {3},\n\tyear = {2012},\n\tpages = {573--591},\n\ttitle = {Biased judgment in censored environments},\n\thowpublished = {https://doi.org/10.1287/mnsc.1120.1612},\n\tvolume = {59},\n}\n\n"
+          }
+        },
+        {
+          "type": "citation",
+          "attrs": {
+            "value": "@article{Koehler2009Selection,\n\tauthor = {Koehler, J. J. and Mercer, M.},\n\tjournal = {Management Science},\n\tnumber = {7},\n\tyear = {2009},\n\tpages = {1107--1121},\n\ttitle = {Selection neglect in mutual fund advertisements},\n\thowpublished = {https://doi.org/10.1287/mnsc.1090.1013},\n\tvolume = {55},\n}\n\n"
+          }
+        },
+        {
+          "text": ".",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Like environments, ",
+          "type": "text"
+        },
+        {
+          "type": "citation",
+          "attrs": {
+            "value": "@article{Gruning2023importance,\n\tauthor = {Gr{\\\" u}ning, D. J. and Panizza, F. and Lorenz-Spreen, P.},\n\tjournal = {The American Journal of Psychology},\n\tnumber = {5},\n\tyear = {2023},\n\tpages = {439--442},\n\ttitle = {The importance of informative interventions in a wicked environment},\n\thowpublished = {https://doi.org/10.5406/19398298.135.4.12},\n\tvolume = {135},\n}\n\n"
+          }
+        },
+        {
+          "text": " propose that digital nudges can be categorized into two distinct types. The first kind are ",
+          "type": "text"
+        },
+        {
+          "text": "behavioral nudges",
+          "type": "text",
+          "marks": [
+            {
+              "type": "em"
+            }
+          ]
+        },
+        {
+          "text": " instantiating behavior change. Research on this nudging type is abundant and its tested environments are ample ",
+          "type": "text"
+        },
+        {
+          "type": "citation",
+          "attrs": {
+            "value": "@article{Daley2018Addressing,\n\tauthor = {Daley, M. F. and Narwaney, K. J. and Shoup, J. A. and Wagner, N. M. and Glanz, J. M.},\n\tjournal = {American Journal of Preventive Medicine},\n\tnumber = {1},\n\tyear = {2018},\n\tpages = {44--54},\n\ttitle = {Addressing parents\\textquoteright{} vaccine concerns: A randomized trial of a social media intervention},\n\thowpublished = {https://doi.org/10.1016/j.amepre.2018.04.010},\n\tvolume = {55},\n}\n\n"
+          }
+        },
+        {
+          "type": "citation",
+          "attrs": {
+            "value": "@article{Glanz2017Web,\n\tauthor = {Glanz, J. M. and Wagner, N. M. and Narwaney, K. J. and Kraus, C. R. and Shoup, J. A. and Xu, S. and O\\textquoteright{}Leary, S. T. and Omer, S. B. and Gleason, K. S. and Daley, M. F.},\n\tjournal = {Pediatrics},\n\tnumber = {6},\n\tyear = {2017},\n\tpages = {1--9},\n\ttitle = {Web-based social media intervention to increase vaccine acceptance: A randomized controlled trial},\n\thowpublished = {https://},\n\tvolume = {140},\n}\n\n"
+          }
+        },
+        {
+          "type": "citation",
+          "attrs": {
+            "value": "@article{Pennycook2021Shifting,\n\tauthor = {Pennycook, G. and Epstein, Z. and Mosleh, M. and Arechar, A. A. and Eckles, D. and Rand, D. G.},\n\tjournal = {Nature},\n\tnumber = {7855},\n\tyear = {2021},\n\tpages = {590--595},\n\ttitle = {Shifting attention to accuracy can reduce misinformation online},\n\thowpublished = {https://doi.org/10.1038/s41586-021-03344-2},\n\tvolume = {592},\n}\n\n"
+          }
+        },
+        {
+          "type": "citation",
+          "attrs": {
+            "value": "@article{Voelkel2021Interventions,\n\tauthor = {Voelkel, J. G. and Chu, J. and Stagnaro, M. and Mernyk, J. S. and Redekopp, C. and Pink, S. L. and Druckman, J. N. and Rand, D. G. and Willer, R.},\n\tjournal = {Nature},\n\tyear = {2021},\n\tpages = {55--64},\n\ttitle = {Interventions reducing affective polarization do not necessarily improve anti-democratic attitudes},\n\thowpublished = {https://doi.org/10.1038/s41562-022-01466-9},\n\tvolume = {7},\n}\n\n"
+          }
+        },
+        {
+          "text": ". Behavioral nudges aim at ",
+          "type": "text"
+        },
+        {
+          "text": "pushing",
+          "type": "text",
+          "marks": [
+            {
+              "type": "em"
+            }
+          ]
+        },
+        {
+          "text": " individuals towards a specific action. For example, in the social media context, based on insights by ",
+          "type": "text"
+        },
+        {
+          "type": "citation",
+          "attrs": {
+            "value": "@article{Pennycook2021Shifting,\n\tauthor = {Pennycook, G. and Epstein, Z. and Mosleh, M. and Arechar, A. A. and Eckles, D. and Rand, D. G.},\n\tjournal = {Nature},\n\tnumber = {7855},\n\tyear = {2021},\n\tpages = {590--595},\n\ttitle = {Shifting attention to accuracy can reduce misinformation online},\n\thowpublished = {https://doi.org/10.1038/s41586-021-03344-2},\n\tvolume = {592},\n}\n\n"
+          }
+        },
+        {
+          "text": ", Twitter warns about sharing a link without having accessed it, in order to reduce the distribution of shared misinformation. The second type concerns ",
+          "type": "text"
+        },
+        {
+          "text": "informative nudges",
+          "type": "text",
+          "marks": [
+            {
+              "type": "em"
+            }
+          ]
+        },
+        {
+          "text": ". These interventions provide people with information about their environment, thereby increasing the transparency about decisive environmental variables and processes. Two examples of this intervention type are illustrative of its characteristics. First, ",
+          "type": "text"
+        },
+        {
+          "type": "citation",
+          "attrs": {
+            "value": "@article{Guess2020digital,\n\tauthor = {Guess, A. M. and Lerner, M. and Lyons, B. and Montgomery, J. M. and Nyhan, B. and Reifler, J. and Sircar, N.},\n\tjournal = {Proceedings of the National Academy of Sciences},\n\tnumber = {27},\n\tyear = {2020},\n\tpages = {15536--15545},\n\ttitle = {A digital media literacy intervention increases discernment between mainstream and false news in the {United} {States} and {India}},\n\thowpublished = {https://doi.org/10.1073/pnas.192049811},\n\tvolume = {117},\n}\n\n"
+          }
+        },
+        {
+          "text": " developed an intervention to promote users’ digital media literacy. The authors presented social media users with tips about finding additional online information to double-check news and presumable facts circulated on social media ",
+          "type": "text"
+        },
+        {
+          "type": "citation",
+          "attrs": {
+            "value": "@article{NetworkList,\n\tauthor = {Network, Prosocial Design},\n\ttitle = {List tips for checking accuracy of shared headlines: Reduce the spread of mis- and disinformation},\n\thowpublished = {https://www.prosocialdesign.org/library/list-tips-for-checking-accuracy-of-shared-headlines},\n}\n\n"
+          }
+        },
+        {
+          "text": ". Second, every time a user attempts to open an application on their mobile phone, the app ",
+          "type": "text"
+        },
+        {
+          "text": "one sec",
+          "type": "text",
+          "marks": [
+            {
+              "type": "em"
+            }
+          ]
+        },
+        {
+          "text": " (one-sec.app) can inform them about their overall number of daily consumption attempts, enhancing transparency of their digital behavior. The medication adherence nudge implemented by ",
+          "type": "text"
+        },
+        {
+          "type": "citation",
+          "attrs": {
+            "value": "@article{Hartman2021Gloria,\n\tauthor = {Hartman, L. and Kok, M. R. and Molenaar, E. and Griep, N. and Van Laar, J. M. and Van Woerkom, J. M. and F., Allaar C. and Raterman, H. G. and Ruiterman, Y. P. M. and Voshaar, M. J. H. and Redol, J. and Pinto, R. M. A. and Klausch, L. T. and Lems, W. F. and Boers, M.},\n\tjournal = {Journal of Trial and Error},\n\tnumber = {1},\n\tyear = {2021},\n\tpages = {50--55},\n\ttitle = {The {Gloria} {Adherence} {Subproject}: Problems and randomization mistakes},\n\thowpublished = {https://doi.org/10.36850/e6},\n\tvolume = {2},\n}\n\n"
+          }
+        },
+        {
+          "text": " in the Gloria Adherence Subproject can be classified as a behavioral intervention.",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "attrs": {
+        "id": "challenges-of-digital-nudges",
+        "level": 1,
+        "fixedId": "challenges-of-digital-nudges"
+      },
+      "content": [
+        {
+          "text": "Challenges of digital nudges",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "As rich and broad as the empirical evidence for digital nudging is, this type of intervention for behavioral change and information gain is confronted with core challenges to its general concept. I outline three prominent problems of the nudging-concept in the following sections.",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "attrs": {
+        "id": "undermining-agency",
+        "level": 2,
+        "fixedId": "undermining-agency"
+      },
+      "content": [
+        {
+          "text": "Undermining agency",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Nudges, especially for behavior change, are meant as automatic or subtle enhancements of certain actions and behavioral patterns. To have the anticipated effect, such interventions have to be cast upon a user unknowingly and unwillingly. Nudges do not allow the addressee to have a say, that is, to choose which nudges to use or not to use for themselves, substantially undermining users’ agency ",
+          "type": "text"
+        },
+        {
+          "type": "citation",
+          "attrs": {
+            "value": "@article{Hertwig2020Nudge,\n\tauthor = {Hertwig, R. and Ryall, M. D.},\n\tjournal = {The Economic Journal},\n\tnumber = {629},\n\tyear = {2020},\n\tpages = {1384--1415},\n\ttitle = {Nudge versus boost: Agency dynamics under libertarian paternalism},\n\thowpublished = {https://doi.org/10.1093/ej/uez054},\n\tvolume = {130},\n}\n\n"
+          }
+        },
+        {
+          "text": ". This is further problematized because nudges do not work through transparency. The opposite is the case: nudges commonly require a certain degree of intransparency toward the user to be successful in affecting their behavior. Addressees of the typical nudge are not aware that they are nudged nor are they able to influence the nudging to their benefit. In short, nudges run the grave risk of patronizing their addressees and are, on top of this, (mostly) undetectable and uncontrollable for them, denying any chance for users to become aware of their passivity. In the Gloria Adherence Subproject specifically, the message nudge was predetermined in presentation (i.e., when displayed) and content (i.e., nudging message) format, allowing no possibility for participants to adapt it to their individual needs (e.g., their daily routine).",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "attrs": {
+        "id": "effect-decay-by-time",
+        "level": 2,
+        "fixedId": "effect-decay-by-time"
+      },
+      "content": [
+        {
+          "text": "Effect decay by time",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "While nudges are resource-efficient and simple to implement, their effects decay relatively quickly, as shown in diverse fields like cognitive biases ",
+          "type": "text"
+        },
+        {
+          "type": "citation",
+          "attrs": {
+            "value": "@misc{Gruning2022First,\n\tauthor = {Gr{\\\" u}ning, D. J. and Mata, A. O. P. and Fiedler, K.},\n\tyear = {2022},\n\ttitle = {First exploration of the prediction-comprehension bias},\n\thowpublished = {https://doi.org/10.31234/osf.io/qp894},\n}\n\n"
+          }
+        },
+        {
+          "text": ", judgement accuracy ",
+          "type": "text"
+        },
+        {
+          "type": "citation",
+          "attrs": {
+            "value": "@article{Lorenz2021Boosting,\n\tauthor = {Lorenz-Spreen, P. and Geers, M. and Pachur, T. and Hertwig, R. and Lewandowsky, S. and Herzog, S.},\n\tjournal = {Scientific Reports},\n\tnumber = {1},\n\tyear = {2021},\n\tpages = {15541},\n\ttitle = {Boosting people\\textquoteright{}s ability to detect microtargeted advertising},\n\thowpublished = {https://doi.org/10.1038/s41598-021-94796-z},\n\tvolume = {11},\n}\n\n"
+          }
+        },
+        {
+          "text": " and memory ",
+          "type": "text"
+        },
+        {
+          "type": "citation",
+          "attrs": {
+            "value": "@article{Trammell1992Persistence,\n\tauthor = {Trammell, N. W. and Valdes, L. A.},\n\tjournal = {Journal of Experimental Psychology: Learning, Memory, and Cognition},\n\tnumber = {3},\n\tyear = {1992},\n\tpages = {565--576},\n\ttitle = {Persistence of negative priming: Steady state or decay?},\n\tvolume = {18},\n}\n\n"
+          }
+        },
+        {
+          "text": ". Nudges need consistent reinforcement. For an illustrative example, ",
+          "type": "text"
+        },
+        {
+          "type": "citation",
+          "attrs": {
+            "value": "@article{Gruning2023importance,\n\tauthor = {Gr{\\\" u}ning, D. J. and Panizza, F. and Lorenz-Spreen, P.},\n\tjournal = {The American Journal of Psychology},\n\tnumber = {5},\n\tyear = {2023},\n\tpages = {439--442},\n\ttitle = {The importance of informative interventions in a wicked environment},\n\thowpublished = {https://doi.org/10.5406/19398298.135.4.12},\n\tvolume = {135},\n}\n\n"
+          }
+        },
+        {
+          "text": " tested the nudging effect of ",
+          "type": "text"
+        },
+        {
+          "text": "one sec,",
+          "type": "text",
+          "marks": [
+            {
+              "type": "em"
+            }
+          ]
+        },
+        {
+          "text": " an app to reduce users’ digital consumption. Every time a user attempted to open another app on their mobile device (e.g., to browse Twitter or TikTok) ",
+          "type": "text"
+        },
+        {
+          "text": "one sec",
+          "type": "text",
+          "marks": [
+            {
+              "type": "em"
+            }
+          ]
+        },
+        {
+          "text": " nudged the user to dismiss this app opening by reminding them of what they were about to do. This nudge, the authors demonstrate, is immensely effective. However, its effectiveness relies on the repeated and constant nudging of its users. Applying this insight to the Gloria Adherence Subproject, it is notable that the nudge of pill-intake by adherence message only occurred once per day, namely if the medication had not been used after a certain time point. Due to their simple and straightforward design, nudges are especially useful for resource-efficient short term effects. However, this also means that their impact runs out rather quickly and is susceptible to moments of inattention. The Gloria Adherence Project may have suffered from this nudge characteristic by providing their nudge too scarcely.",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "attrs": {
+        "id": "risks-in-wicked-environments",
+        "level": 2,
+        "fixedId": "risks-in-wicked-environments"
+      },
+      "content": [
+        {
+          "text": "Risks in wicked environments",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Nudges are especially useful in environments that provide a straightforward and unmasked feedback loop, that is, kind environments. Here nudging can support individuals to increasingly show behavior that promotes positive effects for them (e.g., in well-being, income, and personal relationships). However, applying simple nudges in more complex environments with influential and interconnected moderators (that is, wicked environments), can not only prove ineffective but can also backfire for the individual. For instance, the accuracy nudge against digital misinformation that was recently suggested ",
+          "type": "text"
+        },
+        {
+          "type": "citation",
+          "attrs": {
+            "value": "@article{Pennycook2021Shifting,\n\tauthor = {Pennycook, G. and Epstein, Z. and Mosleh, M. and Arechar, A. A. and Eckles, D. and Rand, D. G.},\n\tjournal = {Nature},\n\tnumber = {7855},\n\tyear = {2021},\n\tpages = {590--595},\n\ttitle = {Shifting attention to accuracy can reduce misinformation online},\n\thowpublished = {https://doi.org/10.1038/s41586-021-03344-2},\n\tvolume = {592},\n}\n\n"
+          }
+        },
+        {
+          "type": "citation",
+          "attrs": {
+            "value": "@article{Lorenz2021Boosting,\n\tauthor = {Lorenz-Spreen, P. and Geers, M. and Pachur, T. and Hertwig, R. and Lewandowsky, S. and Herzog, S.},\n\tjournal = {Scientific Reports},\n\tnumber = {1},\n\tyear = {2021},\n\tpages = {15541},\n\ttitle = {Boosting people\\textquoteright{}s ability to detect microtargeted advertising},\n\thowpublished = {https://doi.org/10.1038/s41598-021-94796-z},\n\tvolume = {11},\n}\n\n"
+          }
+        },
+        {
+          "text": " simply prompts users to be aware of cues which are characteristic of misinformation, like a dubious information source. However, the accuracy nudge may not help or may even do harm if the indicators that people use to judge the accuracy of a piece of information are non-diagnostic. In this example, sources can be intentionally constructed to increase their perceived credibility and distribute misinformation more effectively. In wicked and malignant environments, blindly following simple nudges can lead to grave misinterpretations and result in maladaptive behaviors. For the Gloria Adherence Project, participants are also nudged in the context of a complex environment, in which diverse moderators (e.g., interpersonal events, fluctuations in health, and individually different routines) can interfere with the nudge’s effectiveness.",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "While nudging has a long scientific tradition and has accumulated a body of evidence promoting its effectiveness, the intervention’s challenges restrict the viability and, most importantly, applicability of digital nudges.",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "attrs": {
+        "id": "redemptions-by-boosting",
+        "level": 1,
+        "fixedId": "redemptions-by-boosting"
+      },
+      "content": [
+        {
+          "text": "Redemptions by boosting",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Confronted with such challenges of common nudging interventions, we invite the wider scientific community to consider a more granular inquiry into, and application of, interventions for behavioral change and information gain. One prominent alternative to nudging, or rather an advancement of the nudging-concept, is ",
+          "type": "text"
+        },
+        {
+          "text": "boosting",
+          "type": "text",
+          "marks": [
+            {
+              "type": "em"
+            }
+          ]
+        },
+        {
+          "text": " ",
+          "type": "text"
+        },
+        {
+          "type": "citation",
+          "attrs": {
+            "value": "@article{Hertwig2017When,\n\tauthor = {Hertwig, R.},\n\tjournal = {Behavioural Public Policy},\n\tnumber = {2},\n\tyear = {2017},\n\tpages = {143--161},\n\ttitle = {When to consider boosting: Some rules for policy-makers},\n\thowpublished = {https://doi.org/10.1017/bpp.2016.14},\n\tvolume = {1},\n}\n\n"
+          }
+        },
+        {
+          "type": "citation",
+          "attrs": {
+            "value": "@article{Hertwig2017Nudging,\n\tauthor = {Hertwig, R. and Gr{\\\" u}ne-Yanoff, T.},\n\tjournal = {Perspectives on Psychological Science},\n\tnumber = {6},\n\tyear = {2017},\n\tpages = {973--986},\n\ttitle = {Nudging and boosting: Steering or empowering good decisions},\n\thowpublished = {https://doi.org/10.1177/1745691617702496},\n\tvolume = {12},\n}\n\n"
+          }
+        },
+        {
+          "text": ". Instead of merely highlighting a preferred action or behavioral pattern (e.g., taking the daily pill), boosts foster individuals’ knowledge of and competencies for the respective positive behavior. As a result, boosting interventions allow effective self-directed action ",
+          "type": "text"
+        },
+        {
+          "type": "citation",
+          "attrs": {
+            "value": "@article{Lorenz2021Boosting,\n\tauthor = {Lorenz-Spreen, P. and Geers, M. and Pachur, T. and Hertwig, R. and Lewandowsky, S. and Herzog, S.},\n\tjournal = {Scientific Reports},\n\tnumber = {1},\n\tyear = {2021},\n\tpages = {15541},\n\ttitle = {Boosting people\\textquoteright{}s ability to detect microtargeted advertising},\n\thowpublished = {https://doi.org/10.1038/s41598-021-94796-z},\n\tvolume = {11},\n}\n\n"
+          }
+        },
+        {
+          "text": ". A successful digital intervention moves beyond mere nudging and, additionally, fosters the user’s ability to navigate the environment themselves.",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "A meaningful illustration of successful boosting are inoculation strategies used to address online manipulation (e.g., polarization or product targeting). For example, ",
+          "type": "text"
+        },
+        {
+          "type": "citation",
+          "attrs": {
+            "value": "@article{Lorenz2021Boosting,\n\tauthor = {Lorenz-Spreen, P. and Geers, M. and Pachur, T. and Hertwig, R. and Lewandowsky, S. and Herzog, S.},\n\tjournal = {Scientific Reports},\n\tnumber = {1},\n\tyear = {2021},\n\tpages = {15541},\n\ttitle = {Boosting people\\textquoteright{}s ability to detect microtargeted advertising},\n\thowpublished = {https://doi.org/10.1038/s41598-021-94796-z},\n\tvolume = {11},\n}\n\n"
+          }
+        },
+        {
+          "text": " aimed at improving users’ competence to detect manipulative strategies online by not just priming in users’ minds that individuals are susceptible to manipulative online content but also allowing participants to reflect about their individual susceptibility to such manipulation. Specifically, the authors presented respondents with different manipulative advertisements targeting extraverted or introverted consumers. Supporting participants to reflect about this personality trait in relation to themselves increased their accuracy in detecting the presented advertisements’ targeting strategies compared to just priming the targeted personality trait in the individuals’ mind.",
+          "type": "text"
+        },
+        {
+          "type": "footnote",
+          "attrs": {
+            "count": 3,
+            "value": "<p>Note that this study only concerned short term effects on detecting manipulation strategies. According to the boosting concept, we should also observe long term effects as reflecting about one’s personal susceptibility to manipulation should lead to strengthening a user’s competence sustainably. In comparison, the mere nudging effect should be quickly exhausted.</p>"
+          }
+        },
+        {
+          "text": " Many more illustrations of inoculation ",
+          "type": "text"
+        },
+        {
+          "type": "citation",
+          "attrs": {
+            "value": "@article{Basol2020Good,\n\tauthor = {Basol, M. and Roozenbeek, J. and Van der Linden, S.},\n\tjournal = {Journal of Cognition},\n\tnumber = {1},\n\tyear = {2020},\n\tpages = {2},\n\ttitle = {Good news about bad news: Gamified inoculation boosts confidence and cognitive immunity against fake news},\n\thowpublished = {https://doi.org/10.5334/joc.91},\n\tvolume = {3},\n}\n\n"
+          }
+        },
+        {
+          "type": "citation",
+          "attrs": {
+            "value": "@article{HarropInoculation,\n\tauthor = {Harrop, I. and Roozenbeek, J. and Madsen, J. and Linden, S.},\n\tjournal = {International Journal of Communication},\n\ttitle = {Inoculation can reduce the perceived reliability of polarizing social media content},\n}\n\n"
+          }
+        },
+        {
+          "text": " and of other forms of boosting – for example media literacy ",
+          "type": "text"
+        },
+        {
+          "type": "citation",
+          "attrs": {
+            "value": "@article{Guess2020digital,\n\tauthor = {Guess, A. M. and Lerner, M. and Lyons, B. and Montgomery, J. M. and Nyhan, B. and Reifler, J. and Sircar, N.},\n\tjournal = {Proceedings of the National Academy of Sciences},\n\tnumber = {27},\n\tyear = {2020},\n\tpages = {15536--15545},\n\ttitle = {A digital media literacy intervention increases discernment between mainstream and false news in the {United} {States} and {India}},\n\thowpublished = {https://doi.org/10.1073/pnas.192049811},\n\tvolume = {117},\n}\n\n"
+          }
+        },
+        {
+          "text": " and rebutting science denialism ",
+          "type": "text"
+        },
+        {
+          "type": "citation",
+          "attrs": {
+            "value": "@article{Schmid2019Effective,\n\tauthor = {Schmid, P. and Betsch, C.},\n\tjournal = {Nature Human Behaviour},\n\tnumber = {9},\n\tyear = {2019},\n\tpages = {931--939},\n\ttitle = {Effective strategies for rebutting science denialism in public discussions},\n\thowpublished = {https://doi.org/10.1038/s41562-019-0632-4},\n\tvolume = {3},\n}\n\n"
+          }
+        },
+        {
+          "text": " – exist. Research also attests to boosting’s effects not only in the short-term, but also long term ",
+          "type": "text"
+        },
+        {
+          "type": "citation",
+          "attrs": {
+            "value": "@article{Maertens2021Long,\n\tauthor = {Maertens, R. and Roozenbeek, J. and Basol, M. and Linden, S.},\n\tjournal = {Journal of Experimental Psychology: Applied},\n\tnumber = {1},\n\tyear = {2021},\n\tpages = {1--16},\n\ttitle = {Long-term effectiveness of inoculation against misinformation: Three longitudinal experiments},\n\thowpublished = {https://doi.org/10.1037/xap0000315},\n\tvolume = {27},\n}\n\n"
+          }
+        },
+        {
+          "text": ", compared to nudging.",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "In the following, I revisit the three previously-mentioned challenges of nudging, as applied to the Gloria Adherence Subproject and offer remedies by boosting application. For a potential future retrial of the Gloria Adherence Subproject, I suggest not just scrutinizing the methodological and practical circumstances as described by the authors but also integrating a more effective, long-term oriented version of their adherence intervention. Instead of merely reminding patients to take their daily medication, researchers could provide them with additional information. For instance, the mobile device could provide an accessible information glossary of the pill, its effects, and the importance of taking it at repeated and consistent intervals. Further, patients could be informed about their past pill intake behavior, being motivated by streaks of adherence (i.e., ",
+          "type": "text"
+        },
+        {
+          "text": "n",
+          "type": "text",
+          "marks": [
+            {
+              "type": "em"
+            }
+          ]
+        },
+        {
+          "text": " days of constant and on-time medication adherence) and sensitized by failures to sustain the streak. Allowing patients to understand the reasons for and consequences of the nudged behavior and offering them the opportunity to screen their behavioral performance should foster patients’ competencies, with the long-term effect that pill intake (and any other medication adherence for that matter) grows more reliable. Via the above-described suggestion of a boosting advancement, participants would be more aware of how the medication intervention works and would be allowed to adapt the intake (in a limited way) to their individual routine, enabling them to have more control over the intervention by themselves. Further, advancing the adherence nudge should also address issues of time decay. Informing participants effectively about the idea of the implemented adherence intervention should raise their awareness of the importance of medication intake and also boost the cognitive prominence of having to take the medication. Lastly, fostering the participants’ own competencies regarding their medication intake (e.g., being more informed and in more control) should allow them to adapt more dynamically to issues that arise unexpectedly. This increase in effective navigation of one’s environment should also help individuals to avoid backlash effects – for example, from unexpected personal events interfering with the planned medication intake. In summary, boosting has the potential to improve participants’ agency in the experimental group, intercept effect decay over time, and make the intervention more robust against complex moderators in the environment.",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "attrs": {
+        "id": "conclusion",
+        "level": 1,
+        "fixedId": "conclusion"
+      },
+      "content": [
+        {
+          "text": "Conclusion",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "In the present reflection article, I selectively revisited the scientific landscape on digital nudges, their formats, challenges, and a commendable improvement of its concept. Digital nudges can be distinguished into aiming at behavioral change or at gaining information. Their most prominent challenges are ethical limitations (in terms of individual agency), their effect decay over time, and ineffectiveness or even backlash in more complex environments. Boosting as an advancement of the nudging-concept is robust against all three of these problems. In case of a planned retrial or conceptual replication of the Gloria Adherence Subproject, ",
+          "type": "text"
+        },
+        {
+          "type": "citation",
+          "attrs": {
+            "value": "@article{Hartman2021Gloria,\n\tauthor = {Hartman, L. and Kok, M. R. and Molenaar, E. and Griep, N. and Van Laar, J. M. and Van Woerkom, J. M. and F., Allaar C. and Raterman, H. G. and Ruiterman, Y. P. M. and Voshaar, M. J. H. and Redol, J. and Pinto, R. M. A. and Klausch, L. T. and Lems, W. F. and Boers, M.},\n\tjournal = {Journal of Trial and Error},\n\tnumber = {1},\n\tyear = {2021},\n\tpages = {50--55},\n\ttitle = {The {Gloria} {Adherence} {Subproject}: Problems and randomization mistakes},\n\thowpublished = {https://doi.org/10.36850/e6},\n\tvolume = {2},\n}\n\n"
+          }
+        },
+        {
+          "text": " and other scientists could advance their medication adherence intervention from a mere nudging to a boosting format, thereby increasing the probability of positive medication adherence effects.",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "attrs": {
+        "id": "references",
+        "level": 1,
+        "fixedId": "references"
+      },
+      "content": [
+        {
+          "text": "References",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Bail, C. (2021). Breaking the Social Media Prism. Princeton University Press.",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Daley, M. F., Narwaney, K. J., Shoup, J. A., Wagner, N. M., & Glanz, J. M. (2018). Addressing parents’ vaccine concerns: a randomized trial of a social media intervention. American journal of preventive medicine, 55(1), 44-54. ",
+          "type": "text"
+        },
+        {
+          "text": "https://doi.org/10.1016/j.amepre.2018.04.010",
+          "type": "text",
+          "marks": [
+            {
+              "type": "link",
+              "attrs": {
+                "href": "https://doi.org/10.1016/j.amepre.2018.04.010",
+                "title": ""
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Denrell, J., & March, J. G. (2001). Adaptation as information restriction: The hot stove effect. Organization Science, 12(5), 523-538. ",
+          "type": "text"
+        },
+        {
+          "text": "https://doi.org/10.1287/orsc.12.5.523.10092",
+          "type": "text",
+          "marks": [
+            {
+              "type": "link",
+              "attrs": {
+                "href": "https://doi.org/10.1287/orsc.12.5.523.10092",
+                "title": ""
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Donovan, A. M., & Rapp, D. N. (2020). Look it up: Online search reduces the problematic effects of exposures to inaccuracies. Memory & Cognition, 48(7), 1128-1145.",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Einhorn, H. J., & Hogarth, R. M. (1978). Confidence in judgment: Persistence of the illusion of validity. Psychological Review, 85(5), 395–416. ",
+          "type": "text"
+        },
+        {
+          "text": "https://doi.org/10.1037/0033-295X.85.5.395",
+          "type": "text",
+          "marks": [
+            {
+              "type": "link",
+              "attrs": {
+                "href": "https://doi.org/10.1037/0033-295X.85.5.395",
+                "title": ""
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Feiler, D. C., Tong, J. D., & Larrick, R. P. (2012). Biased judgment in censored environments. Management Science, 59(3), 573-591. ",
+          "type": "text"
+        },
+        {
+          "text": "https://doi.org/10.1287/mnsc.1120.1612",
+          "type": "text",
+          "marks": [
+            {
+              "type": "link",
+              "attrs": {
+                "href": "https://doi.org/10.1287/mnsc.1120.1612",
+                "title": ""
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Gigerenzer, G., Hertwig, R., & Pachur, T. (Eds.). (2011). Heuristics: The foundations of adaptive behavior. Oxford University Press. ",
+          "type": "text"
+        },
+        {
+          "text": "https://doi.org/10.1093/acprof:oso/9780199744282.001.0001",
+          "type": "text",
+          "marks": [
+            {
+              "type": "link",
+              "attrs": {
+                "href": "https://doi.org/10.1093/acprof:oso/9780199744282.001.0001",
+                "title": ""
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Gigerenzer, G., & Selten, R. (Eds.). (2002). Bounded rationality: The adaptive toolbox. MIT press.",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Glanz, J. M., Wagner, N. M., Narwaney, K. J., Kraus, C. R., Shoup, J. A., Xu, S., O'Leary, S. T., Omer, S. B., Gleason, K. S., & Daley, M. F. (2017). Web-based social media intervention to increase vaccine acceptance: A randomized controlled trial. Pediatrics, 140(6), 1–9. https:// doi.org/10.1542/peds.2017-1117",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Glasgow, R. E., Knoepke, C. E., Magid, D., Grunwald, G. K., Glorioso, T. J., Waughtal, J., ... & Ho, P. M. (2021). The NUDGE trial pragmatic trial to enhance cardiovascular medication adherence: study protocol for a randomized controlled trial. Trials, 22(1), 1-16.",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Grüning, D. J., Mata, A. O. P., & Fiedler, K. (2022). First exploration of the prediction-comprehension bias. PsyArXiv. ",
+          "type": "text"
+        },
+        {
+          "text": "https://doi.org/10.31234/osf.io/qp894",
+          "type": "text",
+          "marks": [
+            {
+              "type": "link",
+              "attrs": {
+                "href": "https://doi.org/10.31234/osf.io/qp894",
+                "title": ""
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Grüning, D. J., Panizza, F., & Lorenz-Spreen, P. (2022). The importance of informative interventions in a wicked environment. PsyArXiv ",
+          "type": "text"
+        },
+        {
+          "text": "https://doi.org/10.31234/osf.io/azsbn",
+          "type": "text",
+          "marks": [
+            {
+              "type": "link",
+              "attrs": {
+                "href": "https://doi.org/10.31234/osf.io/azsbn",
+                "title": ""
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Grüning, D. J., Riedel, F., & Lorenz-Spreen, P. (2022, July 26). Directing smart phone use through the self-nudge app one sec. PsyArXiv. ",
+          "type": "text"
+        },
+        {
+          "text": "https://doi.org/10.31234/osf.io/nwuar",
+          "type": "text",
+          "marks": [
+            {
+              "type": "link",
+              "attrs": {
+                "href": "https://doi.org/10.31234/osf.io/nwuar",
+                "title": ""
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Guess, A. M., Lerner, M., Lyons, B., Montgomery, J. M., Nyhan, B., Reifler, J., & Sircar, N. (2020). A digital media literacy intervention increases discernment between mainstream and false news in the United States and India. Proceedings of the National Academy of Sciences, 117(27), 15536-15545. ",
+          "type": "text"
+        },
+        {
+          "text": "https://doi.org/10.1073/pnas.192049811",
+          "type": "text",
+          "marks": [
+            {
+              "type": "link",
+              "attrs": {
+                "href": "https://doi.org/10.1073/pnas.192049811",
+                "title": ""
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Hartman, L., Kok, M. R., Molenaar, E., Griep, N., Van Laar, J. M., Van Woerkom, J. M., Allaar C. F., Raterman, H. G., Ruiterman, Y. P. M., Voshaar, M. J. H., Redol, J., Pinto, R. M. A., Klausch, L. T., Lems, W. F., & Boers, M. (2021). The Gloria Adherence Subproject: Problems and Randomization Mistakes. Journal of Trial and Error. ",
+          "type": "text"
+        },
+        {
+          "text": "https://doi.org/10.36850/e6",
+          "type": "text",
+          "marks": [
+            {
+              "type": "link",
+              "attrs": {
+                "href": "https://doi.org/10.36850/e6",
+                "title": ""
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Hertwig, R. (2017). When to consider boosting: some rules for policy-makers. Behavioural Public Policy, 1(2), 143-161. ",
+          "type": "text"
+        },
+        {
+          "text": "https://doi.org/10.1017/bpp.2016.14",
+          "type": "text",
+          "marks": [
+            {
+              "type": "link",
+              "attrs": {
+                "href": "https://doi.org/10.1017/bpp.2016.14",
+                "title": ""
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Hertwig, R., & Grüne-Yanoff, T. (2017). Nudging and boosting: Steering or empowering good decisions. Perspectives on Psychological Science, 12(6), 973–986. ",
+          "type": "text"
+        },
+        {
+          "text": "https://doi.org/10.1177/1745691617702496",
+          "type": "text",
+          "marks": [
+            {
+              "type": "link",
+              "attrs": {
+                "href": "https://doi.org/10.1177/1745691617702496",
+                "title": ""
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Horne, B. D., Muhlestein, J. B., Lappé, D. L., May, H. T., Le, V. T., Bair, T. L., ... & Anderson, J. L. (2022). Behavioral nudges as patient decision support for medication adherence: the ENCOURAGE randomized controlled trial. American Heart Journal, 244, 125-134.",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Koehler, J. J., & Mercer, M. (2009). Selection neglect in mutual fund advertisements. Management Science, 55(7), 1107-1121. ",
+          "type": "text"
+        },
+        {
+          "text": "https://doi.org/10.1287/mnsc.1090.1013",
+          "type": "text",
+          "marks": [
+            {
+              "type": "link",
+              "attrs": {
+                "href": "https://doi.org/10.1287/mnsc.1090.1013",
+                "title": ""
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Kozyreva, A., Lorenz-Spreen, P., Herzog, S. M., Ecker, U. K. H., Lewandowsky, S., & Hertwig, R. (2022, December 16). Toolbox of Interventions Against Online Misinformation and Manipulation. ",
+          "type": "text"
+        },
+        {
+          "text": "https://doi.org/10.31234/osf.io/x8ejt",
+          "type": "text",
+          "marks": [
+            {
+              "type": "link",
+              "attrs": {
+                "href": "https://doi.org/10.31234/osf.io/x8ejt",
+                "title": ""
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Lorenz-Spreen, P., Geers, M., Pachur, T., Hertwig, R., Lewandowsky, S., & Herzog, S. (2021). Boosting people’s ability to detect microtargeted advertising. Scientific Reports, 11(15541), 15541. ",
+          "type": "text"
+        },
+        {
+          "text": "https://doi.org/10.1038/s41598-021-94796-z",
+          "type": "text",
+          "marks": [
+            {
+              "type": "link",
+              "attrs": {
+                "href": "https://doi.org/10.1038/s41598-021-94796-z",
+                "title": ""
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Luong, P., Glorioso, T. J., Grunwald, G. K., Peterson, P., Allen, L. A., Khanna, A., ... & Bull, S. (2021). Text message medication adherence reminders automated and delivered at scale across two institutions: testing the nudge system: pilot study. Circulation: Cardiovascular Quality and Outcomes, 14(5), e007015.",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Lutzke, L., Drummond, C., Slovic, P., & Árvai, J. (2019). Priming critical thinking: Simple interventions limit the influence of fake news about climate change on Facebook. Global environmental change, 58, 101964.",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Matias, J. N. (2019). Preventing harassment and increasing group participation through social norms in 2,190 online science discussions. Proceedings of the National Academy of Sciences, 116(20), 9785-9789. ",
+          "type": "text"
+        },
+        {
+          "text": "https://doi.org/10.1073/pnas.1813486116",
+          "type": "text",
+          "marks": [
+            {
+              "type": "link",
+              "attrs": {
+                "href": "https://doi.org/10.1073/pnas.1813486116",
+                "title": ""
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Pennycook, G., Epstein, Z., Mosleh, M., Arechar, A. A., Eckles, D., & Rand, D. G. (2021). Shifting attention to accuracy can reduce misinformation online. Nature, 592(7855), 590-595. ",
+          "type": "text"
+        },
+        {
+          "text": "https://doi.org/10.1038/s41586-021-03344-2",
+          "type": "text",
+          "marks": [
+            {
+              "type": "link",
+              "attrs": {
+                "href": "https://doi.org/10.1038/s41586-021-03344-2",
+                "title": ""
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Reijula, S., & Hertwig, R. (2022). Self-nudging and the citizen choice architect. Behavioural Public Policy, 6(1), 119-149. ",
+          "type": "text"
+        },
+        {
+          "text": "https://doi.org/10.1017/bpp.2020.5",
+          "type": "text",
+          "marks": [
+            {
+              "type": "link",
+              "attrs": {
+                "href": "https://doi.org/10.1017/bpp.2020.5",
+                "title": ""
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Roozenbeek, J., Freeman, A. L., & van der Linden, S. (2021). How accurate are accuracy-nudge interventions? A preregistered direct replication of Pennycook et al.(2020). Psychological science, 32(7), 1169-1178.",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Simon, H. A. (1956). Rational choice and the structure of the environment. Psychological review, 63(2), 129-138. ",
+          "type": "text"
+        },
+        {
+          "text": "https://doi.org/10.1037/h0042769",
+          "type": "text",
+          "marks": [
+            {
+              "type": "link",
+              "attrs": {
+                "href": "https://doi.org/10.1037/h0042769",
+                "title": ""
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Thomas, L. (1983). The youngest science: Notes of a medicine watcher. Viking.",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Trammell, N. W., & Valdes, L. A. (1992). Persistence of negative priming: Steady state or decay? Journal of Experimental Psychology: Learning, Memory, and Cognition, 18(3), 565–576.",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Tyler, T., Katsaros, M., Meares, T., & Venkatesh, S. (2021). Social media governance: can social media companies motivate voluntary rule following behavior among their users? Journal of experimental criminology, 17(1), 109-127. ",
+          "type": "text"
+        },
+        {
+          "text": "https://doi.org/10.1007/s11292-019-09392-z",
+          "type": "text",
+          "marks": [
+            {
+              "type": "link",
+              "attrs": {
+                "href": "https://doi.org/10.1007/s11292-019-09392-z",
+                "title": ""
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Voelkel, J. G., Chu, J., Stagnaro, M., Mernyk, J. S., Redekopp, C., Pink, S. L., Druckman, J. N., Rand, D. G., & Willer, R. (2021, May 27). Interventions Reducing Affective Polarization Do Not Improve Anti-Democratic Attitudes. ",
+          "type": "text"
+        },
+        {
+          "text": "https://doi.org/10.31219/osf.io/7evmp",
+          "type": "text",
+          "marks": [
+            {
+              "type": "link",
+              "attrs": {
+                "href": "https://doi.org/10.31219/osf.io/7evmp",
+                "title": ""
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

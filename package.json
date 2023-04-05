@@ -1,0 +1,50 @@
+{
+  "name": "ojs-to-pubpub",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsup",
+    "lint": "tsc",
+    "ci": "rm -rf dist && pnpm run build && pnpm run lint && pnpm run test",
+    "prepublish": "pnpm run ci",
+    "test": "vitest run",
+    "dev": "vitest",
+    "release": "pnpm run ci && changeset publish"
+  },
+  "keywords": [
+    "pubpub",
+    "api",
+    "client",
+    "client",
+    "publishing"
+  ],
+  "author": "Thomas F. K. Jorna",
+  "license": "GPL-3.0-or-later",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist"
+  ],
+  "dependencies": {
+    "pubpub-client": "^0.6.0"
+  },
+  "devDependencies": {
+    "@types/node": "^18.15.11",
+    "prettier": "^2.8.7",
+    "typescript": "^5.0.3",
+    "vitest": "^0.29.8"
+  }
+}
