@@ -1,18 +1,25 @@
-import { AttributionsPayload, PubPub } from 'pubpub-client'
+import { AttributionsPayload, PubPub, allowedMimeTypes } from 'pubpub-client'
+import { postProcessGen } from './postProcess'
+import { doUnspeakableThings } from './unspeakableThings'
 const sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms))
 
-export async function doSomething(
-  {
-    importAbstract,
-    importReferences,
-  }: {
-    importAbstract?: boolean
-    importReferences?: boolean
-  } = {
+export async function doSomething(settings: {
+  submissionId: number
+  publicationId?: number
+  importAbstract?: boolean
+  importReferences?: boolean
+}) {
+  const defaultSettings = {
+    publicationId: settings.submissionId,
     importAbstract: true,
     importReferences: true,
   }
-) {
+
+  const { importAbstract, submissionId, publicationId, importReferences } = {
+    ...defaultSettings,
+    ...settings,
+  }
+
   const pubpub = new PubPub(
     process.env.COMMUNITY_ID!,
     process.env.COMMUNITY_URL!
@@ -23,21 +30,13 @@ export async function doSomething(
   let pubId: string | undefined
 
   try {
-    const subres = await fetch(
-      `${process.env.OJS_API}/submissions/59?apiToken=${process.env.OJS_TOKEN}`
-    )
-
-    const subdata = await subres.json()
-
-    console.dir(subdata, { depth: null })
-
     const pubres = await fetch(
-      `${process.env.OJS_API}/submissions/59/publications/59?apiToken=${process.env.OJS_TOKEN}`
+      `${process.env.OJS_API}/submissions/${submissionId}/publications/${publicationId}?apiToken=${process.env.OJS_TOKEN}`
     )
 
     const pubdata = (await pubres.json()) as Publication
 
-    console.dir(pubdata, { depth: null })
+    console.log(pubdata)
 
     let slug: string | undefined
 
@@ -78,7 +77,7 @@ export async function doSomething(
 
     // map the data to pubpub
 
-    const possibleImage = pubdata.coverImage.en_US.dateUploaded
+    const possibleImage = pubdata?.coverImage?.en_US?.dateUploaded
       ? `https://submit.trialanderror.org/public/journals/1/${pubdata.coverImage.en_US.uploadName}`
       : undefined
     const input: Parameters<typeof pubpub.pub.modify>[1] = {
@@ -91,9 +90,6 @@ export async function doSomething(
               fileName: 'main.pdf',
               fileOrPath: pdfFile,
               mimeType: 'application/pdf',
-              // type: 'formatted',
-              // url: pdf,
-              // createdAt: new Date().toISOString(),
             },
           ]
         : undefined,
@@ -105,10 +101,6 @@ export async function doSomething(
             },
           }
         : {}),
-      // citationStyle: {
-      //   citationStyle: 'apa-7',
-      //   inlineCitationStyle: 'authorYear',
-      // },
     }
 
     const modified = await pubpub.pub.modify(pubId, input)
@@ -134,18 +126,26 @@ export async function doSomething(
     // set the new attributions to the authors minus the current user
 
     const newAttributions: AttributionsPayload[] = pubdata.authors.map(
-      (author) => ({
-        isAuthor: true,
-        pubId: pubId as string,
-        // roles: 'Writing – Original Draft Preparation',
-        affiliation: author.affiliation.en_US,
-        name: `${author.givenName.en_US ?? ''} ${
-          author.familyName.en_US ?? ''
-        }`.trim(),
-        orcid: author.orcid,
-        // seq goes from 0 to n, but order goes from 1 to 0, so we do some math
-        order: (pubdata.authors.length - author.seq) / pubdata.authors.length,
-      })
+      (author, idx) => {
+        const order =
+          1 - (pubdata.authors.length - idx) / pubdata.authors.length
+        const name =
+          author.preferredPublicName.en_US ||
+          `${author.givenName.en_US ?? ''} ${
+            author.familyName.en_US ?? ''
+          }`.trim()
+        console.log(name, order)
+        return {
+          isAuthor: true,
+          pubId: pubId as string,
+          name,
+          // roles: 'Writing – Original Draft Preparation',
+          affiliation: author.affiliation.en_US,
+          orcid: author.orcid,
+          // seq goes from 0 to n, but order goes from 1 to 0, so we do some math
+          order,
+        }
+      }
     )
 
     console.log('Adding attributions...')
@@ -168,9 +168,9 @@ export async function doSomething(
 
         return pubpub.pub.attributions.modify({
           pubId: pubId as string,
-          roles: ['Writing – Original Draft Preparation'],
+          // roles: ['Writing – Original Draft Preparation'],
           id: attr.id,
-          orcid: corresponding?.orcid,
+          orcid: corresponding?.orcid?.replace(/https?:\/\/orcid.org\//, ''),
           affiliation: corresponding?.affiliation || undefined,
         })
       })
@@ -178,86 +178,79 @@ export async function doSomething(
 
     console.log('✅ Updated attributions to include role and orcid')
 
-    const texBibandImageGalleys = pubdata.galleys.filter((galley) =>
-      ['tex', 'bib', 'jpg', 'jpeg', 'png'].includes(
-        galley.file.path.split('.').pop() ?? 'docx'
-      )
+    const texBibGalleys = pubdata.galleys.filter((galley) =>
+      ['tex', 'bib'].includes(galley.file.path.split('.').pop() ?? 'docx')
     )
 
+    const mediaGalleys = pubdata.galleys.filter((galley) =>
+      galley.label.includes('media')
+    )
+
+    const mappedFilesPromise = downloadGalleys(texBibGalleys)
+    const mappedMediaPromise = downloadGalleys(mediaGalleys)
+
+    const [mappedFiles, mappedMedia] = await Promise.all([
+      mappedFilesPromise,
+      mappedMediaPromise,
+    ])
+
     console.log('Downloading galleys...')
-    const mappedFiles: Parameters<typeof pubpub.pub.hacks.import>[1] =
-      await Promise.all(
-        texBibandImageGalleys.map(async (galley) => {
-          const file = await fetch(
-            `${process.env.OJS_API}/_files/${galley.submissionFileId}?apiToken=${process.env.OJS_TOKEN}`
-          ).then((res) => res.blob())
-          return {
-            fileName: galley.file.name.en_US,
-            file,
-            mimeType: galley.file.mimetype,
+
+    const texFile = findFileByExtension(mappedFiles, 'tex')
+    const bibFile = findFileByExtension(mappedFiles, 'bib')
+    const texText = doUnspeakableThings(await (texFile?.file as Blob).text())
+    const bibText = await (bibFile?.file as Blob).text()
+
+    const mappedFilesWithModifiedTex = mappedFiles.map((file) => {
+      console.log(file)
+      if (Array.isArray(file)) {
+        return file.map((f) => {
+          if (f.fileName.endsWith('.tex')) {
+            return {
+              ...f,
+              file: new Blob([texText], { type: 'text/x-tex' }),
+            }
           }
+          return f
         })
-      )
+      }
+      if (file.fileName.endsWith('.tex')) {
+        return {
+          ...file,
+          file: new Blob([texText], { type: 'text/x-tex' }),
+        }
+      }
+
+      return file
+    })
 
     console.log('✅ Downloaded galleys!')
 
-    const { abstract } = pubdata
-    // if (importAbstract && abstract.en_US) {
-    console.log('Importing abstract...')
-    const abstractWithH1AndDiv = `<div><h1>Abstract</h1>${abstract.en_US}</div>`
+    const { abstract, funding } = pubdata
 
-    const abstractFile = Buffer.from(abstractWithH1AndDiv ?? '')
-    const toBeImportedAbstract = [
-      {
-        fileName: 'abstract.html',
-        file: abstractFile,
-        mimeType: 'text/html',
-      },
-    ]
-    // console.log('✅ Successfully imported abstract!')
-    // }
+    const keywords = pubdata.keywords.en_US?.join(', ')
 
-    // console.log('Importing files...')
-    // const importedFiles = await pubpub.pub.hacks.import(
-    //   `pub/${coolerSlug}`,
-    //   mappedFiles,
-    //   { add: !!importAbstract }
-    // )
-    // console.log('✅ Successfully imported files!')
+    const importedFiles = await pubpub.pub.hacks.import(
+      `pub/${coolerSlug}`,
 
-    const { citations } = pubdata
+      [...mappedMedia, ...mappedFilesWithModifiedTex],
 
-    // if (importReferences && citations.length > 0) {
-    console.log('Importing references...')
-    const citationsInParagraphs = citations.map(
-      (citation) => `<p>${citation}</p>`
+      postProcessGen({
+        tex: texText,
+        abstract: abstract.en_US,
+        keywords,
+        bib: bibText,
+        funding,
+        doi: pubdata['pub-id::doi'] ?? '10.36850/e1',
+      })
     )
-    const citationsWrappedInDiv = `<div>
-      <h1>References</h1>
-      ${citationsInParagraphs.join('\n')}
-      </div>`
-
-    const citationsFile = Buffer.from(citationsWrappedInDiv)
-    const toBeImportedCitations = [
-      {
-        fileName: 'references.html',
-        file: citationsFile,
-        mimeType: 'text/html',
-      },
-    ]
-
-    const importedFiles = await pubpub.pub.hacks.import(`pub/${coolerSlug}`, [
-      toBeImportedAbstract,
-      mappedFiles,
-      toBeImportedCitations,
-    ])
 
     console.log('✅ Successfully imported references!')
 
     console.log('Setting metadata on OJS side...')
     // set the publicationId to the pubId
     const updated = await fetch(
-      `${process.env.OJS_API}/submissions/59/publications/59?apiToken=${process.env.OJS_TOKEN}`,
+      `${process.env.OJS_API}/submissions/${submissionId}/publications/${publicationId}?apiToken=${process.env.OJS_TOKEN}`,
       {
         method: 'PUT',
         headers: {
@@ -297,7 +290,7 @@ export async function doSomething(
   }
 }
 
-doSomething()
+type NewType = Funding
 
 interface Publication {
   _href: string
@@ -317,6 +310,7 @@ interface Publication {
   disciplines: Disciplines
   doiSuffix?: any
   fullTitle: Abstract
+  funding: NewType
   galleys: Galley[]
   hideAuthor?: any
   id: number
@@ -444,4 +438,44 @@ interface Author {
 
 interface Abstract {
   en_US: string
+}
+
+export interface Funding {
+  [key: string]: {
+    funderName: string
+    funderIdentification: string
+    funderAwards: string[]
+  }
+}
+
+function findFileByExtension(
+  mappedFiles: Parameters<PubPub['pub']['hacks']['import']>[1],
+  extension: string
+) {
+  return !Array.isArray(mappedFiles[0])
+    ? (mappedFiles as Exclude<typeof mappedFiles, any[][]>)?.find((file) =>
+        file.fileName.endsWith(extension)
+      )
+    : (mappedFiles as Extract<typeof mappedFiles, any[][]>)
+        ?.find((file) =>
+          file.some((filee) => filee.fileName.endsWith(extension))
+        )
+        ?.find((file) => file.fileName.endsWith(extension))
+}
+
+async function downloadGalleys(
+  galleys: Galley[]
+): Promise<Parameters<PubPub['pub']['hacks']['import']>[1]> {
+  return await Promise.all(
+    galleys.map(async (galley) => {
+      const file = await fetch(
+        `${process.env.OJS_API}/_files/${galley.submissionFileId}?apiToken=${process.env.OJS_TOKEN}`
+      ).then((res) => res.blob())
+      return {
+        fileName: galley.file.name.en_US,
+        file,
+        mimeType: galley.file.mimetype as (typeof allowedMimeTypes)[number],
+      }
+    })
+  )
 }
